@@ -24,8 +24,14 @@ pygame.display.update()
 
 zombie = pygame.image.load("./images/scary_face.png")
 zombie = pygame. transform.scale(zombie, (width, height))
+scream = pygame.mixer.Sound("./sounds/scream.wav")
+sleep(randrange(5, 15))
+scream.play()
+screen.blit(zombie, (0, 0))
+pygame.display.update()
 
 sleep(3)
+scream.stop()
 
 # quit game
 pygame.quit()
