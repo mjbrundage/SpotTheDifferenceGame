@@ -17,14 +17,14 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.update()
 
 # game
-difference = pygame.image.load("spot_the_diff.png")
+difference = pygame.image.load("images/spot_the_diff.png")
 difference = pygame.transform.scale(difference, (width, height))
 screen.blit(difference, (0, 0))
 pygame.display.update()
 
-zombie = pygame.image.load("scary_face.png")
+zombie = pygame.image.load("images/scary_face.png")
 zombie = pygame. transform.scale(zombie, (width, height))
-scream = pygame.mixer.Sound("scream.wav")
+scream = pygame.mixer.Sound("sounds/scream.wav")
 sleep(randrange(5, 15))
 scream.play()
 screen.blit(zombie, (0, 0))
