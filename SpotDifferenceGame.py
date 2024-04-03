@@ -13,3 +13,19 @@ width = pygame.display.Info().current_w
 height = pygame.display.Info().current_h
 
 # screen
+screen = pygame.display.set_mode((width, height))
+pygame.display.update()
+
+# game
+difference = pygame.image.load("./images/spot_the_diff.png")
+difference = pygame.transform.scale(difference, (width, height))
+screen.blit(difference, (0, 0))
+pygame.display.update()
+
+zombie = pygame.image.load("./images/scary_face.png")
+zombie = pygame. transform.scale(zombie, (width, height))
+
+sleep(3)
+
+# quit game
+pygame.quit()
